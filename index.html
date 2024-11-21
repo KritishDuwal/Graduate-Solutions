@@ -1,0 +1,372 @@
+<!-- Author: Kritish Duwal - 8914269 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graduate Solutions</title>
+    <link rel="stylesheet" href="css/foundation.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header Styles */
+        header {
+            background-image: url('./images/plain.jpg');
+            object-fit: cover;
+            color: white;
+            padding: 20px 0;
+        }
+
+        header nav ul.menu {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            list-style: none;
+            padding: 0;
+        }
+
+        header nav ul.menu li {
+            margin-left: 20px;
+        }
+
+        header nav ul.menu li a {
+            color: black;
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: transparent;
+            transition: background-color 0.3s ease;
+        }
+
+        header nav ul.menu li a:hover {
+            background-color: #BE6731;
+            color: white;
+        }
+
+        header .button {
+            background-color: #BE6731;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+
+        header .button:hover {
+            background-color: #000;
+        }
+
+        /* Main Content Section */
+        main {
+            padding: 20px 0;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 40px 5px;
+            margin-bottom: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        section:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        section h1,
+        section h2 {
+            color: #22311E;
+        }
+
+        section h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        section h2 {
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+
+        section p {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        /* Services Section */
+        ul {
+            list-style: disc;
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        /* Form Styling */
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            background-color: #BE6731;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #000;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #22311E;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        .img1 {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+
+        .img-services,
+        .img-business,
+        .img-graduate {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        /* Responsive Styles */
+        @media only screen and (max-width: 640px) {
+            header nav ul.menu {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            main {
+                padding: 10px;
+            }
+
+            section {
+                padding: 20px;
+            }
+
+            section h1 {
+                font-size: 2em;
+            }
+
+            section h2 {
+                font-size: 1.5em;
+            }
+
+            form {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="grid-container">
+            <div class="grid-x grid-margin-x">
+                <div class="large-12 medium-12 small-9 cell">
+                    <nav>
+                        <ul class="menu align-right">
+                            <img src="images/grad.png" height="50px" width="50px" alt="Graduate Solutions Logo">
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="business.html">For Businesses</a></li>
+                            <li><a href="graduate.html">For Graduates</a></li>
+                            <li><a href="#contact">Contact Us</a></li>
+                            <li class="button"><a href="login.html">Sign In</li></a>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- About Us Section -->
+        <img src="./images/graduate.jpg" alt="Graduates working together" class="img1">
+        
+        <div class="grid-container">
+            <div class="grid-x grid-margin-x">
+                <br>
+                <section>
+                    <div class="cell small-12">
+                        <h1>About Graduate Solutions</h1>
+                        <p>Graduate Solutions is dedicated to bridging the gap between recent graduates and small businesses. Our platform enables graduates to showcase their skills, gain experience, and collaborate with local businesses, providing affordable services like web design, logo creation, and marketing solutions.</p>
+                        <p>We believe in fostering a collaborative environment where recent graduates can gain valuable real-world experience while providing cost-effective solutions to help businesses grow. Through our platform, graduates can build a robust portfolio and enhance their career prospects, while businesses can access high-quality, affordable services tailored to their needs.</p>
+                        <p>We also provide career development resources, networking opportunities, and mentorship programs to ensure graduates are equipped with the tools they need to succeed in the competitive job market.</p>
+                        </div>
+                </section>
+            </div>
+
+            <!-- Our Mission Section -->
+            <section>
+                <div class="grid-x grid-margin-x">
+                    <div class="cell small-6">
+                        <h2>Our Mission</h2>
+                        <p>To empower recent graduates by providing them with opportunities to build their portfolio while supporting small businesses with affordable, high-quality services.</p>
+                    </div>
+                    <div class="cell small-6">
+                        <h2>Our Vision</h2>
+                        <p>We envision a world where talented graduates can seamlessly transition into the workforce by contributing to the growth of local businesses.</p>
+                    </div>
+                </div>
+                <div class="grid-x grid-margin-x">
+                    <div class="cell small-12">
+                        <img src="./images/mission-vision.jpg" alt="Mission and Vision Representation" style="width: 100%; height: 500px; object-fit: cover;">
+                    </div>
+                </div>
+            </section>
+            
+        </div>
+
+        <!-- Services Section -->
+        <section id="services" class="grid-container">
+            <div class="grid-x grid-margin-x flex-container align-center align-middle">
+                <div class="cell small-6">
+                    <h1>Our Services</h1>
+                    <ul>
+                        <li><strong>Website Design:</strong> Our skilled graduates create responsive, modern websites that are tailored to your business’s needs. Whether you need an e-commerce site or a simple landing page, we have you covered.</li>
+                        <li><strong>Logo Creation:</strong> Get a unique and professional logo designed to make your brand stand out in the market. Our graduates are trained in the latest design trends to ensure your business makes a strong visual impact.</li>
+                        <li><strong>Marketing Campaigns:</strong> We offer targeted marketing campaigns that will help your business reach its desired audience. From social media ads to email marketing, our graduates can help you grow your business.</li>
+                        <li><strong>Social Media Management:</strong> Our graduates will manage your social media profiles, post engaging content, and interact with your audience to keep your brand active and growing online.</li>
+                    </ul>
+                    
+                </div>
+                <div class="cell small-6">
+                    <img src="./images/services.jpg" alt="Our Services being offered" class="img-services">
+                </div>
+            </div>
+        </section>
+
+        <!-- For Businesses Section -->
+        <section id="businesses" class="grid-container">
+            <div class="grid-x grid-margin-x">
+                <div class="cell small-12">
+                    <h1>For Businesses</h1>
+                    <p>Our platform helps businesses by connecting them with recent graduates who offer affordable services. You can manage projects, view graduates, and provide feedback on their work.</p>
+                    <p>Graduate Solutions connects businesses with a pool of talented, recently graduated professionals offering cost-effective solutions. Whether you are a startup needing creative services or an established company looking to streamline your online presence, we provide access to affordable, high-quality talent.</p>
+                    <h2>Why Choose Graduate Solutions?</h2>
+                        <ul>
+                            <li><strong>Cost-Effective Solutions:</strong> Save on marketing and design costs by hiring skilled graduates at competitive rates.</li>
+                            <li><strong>Fresh Talent:</strong> Tap into the latest industry trends and technologies by working with recent graduates trained in modern methodologies.</li>
+                            <li><strong>Ease of Use:</strong> Our platform allows businesses to easily post jobs, track project progress, and communicate directly with graduates.</li>
+                        </ul>
+                        <p>Get started today and discover how Graduate Solutions can help you meet your business goals.</p>
+                        <img src="./images/business.jpg" alt="Business collaboration" style="width: 100%; height: 300px; object-fit: cover;">
+                </div>
+            </div>
+        </section>
+
+        <!-- For Graduates Section -->
+        <section id="graduates" class="grid-container">
+            <div class="grid-x grid-margin-x">
+                <div class="cell small-12">
+                    <h1>For Graduates</h1>
+                    <p>As a recent graduate, Graduate Solutions provides you with a platform to build your portfolio, gain real-world experience, and connect with local businesses in need of your skills.</p>
+                        <h2>How It Works</h2>
+                        <ul>
+                            <li><strong>Create a Profile:</strong> Showcase your education, skills, and portfolio to attract potential clients.</li>
+                            <li><strong>Find Projects:</strong> Browse available projects that match your skills, and start building your professional experience.</li>
+                            <li><strong>Get Feedback:</strong> Receive feedback from businesses to improve your skills and build a stronger portfolio.</li>
+                            <li><strong>Grow Your Career:</strong> Use your project experience to enhance your resume and build a network of professional contacts.</li>
+                        </ul>
+                        <p>Start your journey today by signing up and creating your profile. Your future career success begins here!</p>
+                        <img src="./images/graduate-showcase.jpg" alt="Graduate portfolio showcase" style="width: 100%; height: 300px; object-fit: cover;">
+                </div>
+            </div>
+        </section>
+    
+        <!-- Contact Us Section -->
+        <section id="contact"class="grid-container">
+                <div class="grid-x grid-margin-x">
+                    <div class="cell small-12">
+                        <h2>Contact Us</h2>
+                        <p>If you have any questions or would like to get in touch, feel free to fill out the form below:</p>
+                        <form>
+                            <label for="name">Name:
+                                <input type="text" id="name" placeholder="Enter your name" required>
+                            </label><br>
+                            <label for="email">Email:
+                                <input type="email" id="email" placeholder="Enter your email" required>
+                            </label><br>
+                            <label for="message">Message:
+                                <textarea id="message" placeholder="Enter your message" rows="5" required></textarea>
+                            </label><br>
+                            <input type="submit" value="Send Message" class="button">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="grid-container">
+            <div class="grid-x grid-margin-x">
+                <div class="cell small-12">
+                    <p>&copy; 2024 Graduate Solutions. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Foundation JavaScript -->
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
