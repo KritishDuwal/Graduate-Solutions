@@ -1,0 +1,171 @@
+<!-- Author: Pratish Dhungel -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create or Join Group</title>
+  <link rel="stylesheet" href="../css/foundation.css">
+  <link rel="stylesheet" href="../css/apps.css">
+  <style>
+    /* Author: Pratish Dhungel */
+
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container Styling */
+.grid-container {
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Header Section */
+h1 {
+    color: #22311E;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    line-height: 1.8;
+    text-align: center;
+    color: #666;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+}
+
+th {
+    background-color: #22311E;
+    color: white;
+}
+
+td {
+    background-color: #f9f9f9;
+}
+
+/* Buttons */
+button {
+    background-color: #BE6731;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+button:hover {
+    background-color: #000;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 640px) {
+    .grid-container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+
+    button {
+        font-size: 12px;
+        padding: 8px 15px;
+    }
+}
+
+  </style>
+</head>
+<body>
+  <main>
+    <div class="grid-x grid-margin-x align-center text-center">
+      <div class="cell medium-8 large-6">
+        <h1>Manage Your Groups</h1>
+        <p>View, edit, or delete your groups below.</p>
+      </div>
+    </div>
+</header>
+    <!-- Group List -->
+    <div class="grid-x grid-margin-x">
+      <div class="cell medium-12">
+        <table>
+          <thead>
+            <tr>
+              <th>Group Name</th>
+              <th>Description</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Group 1 -->
+            <tr>
+              <td>Web Designers</td>
+              <td>A group for collaborative web design projects</td>
+              <td>
+                <a href="#"><button>View</button></a>
+                <a href="#"><button>Edit</button></a>
+                <a href="#"><button>Delete</button></a>
+              </td>
+            </tr>
+
+            <!-- Group 2 -->
+            <tr>
+              <td>Logo Creators</td>
+              <td>Working on logo design and branding</td>
+              <td>
+                <a href="#"><button>View</button></a>
+                <a href="#"><button>Edit</button></a>
+                <a href="#"><button>Delete</button></a>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+</main>
+<script src="js/vendor/jquery.js"></script>
+ <script src="js/vendor/what-input.js"></script>
+ <script src="js/vendor/foundation.js"></script>
+ <script src="js/app.js"></script>
+</body>
+</html>

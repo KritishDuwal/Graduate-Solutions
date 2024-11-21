@@ -1,0 +1,150 @@
+<!-- Author: Ufuk Gumus -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create or Join Group</title>
+  <link rel="stylesheet" href="../css/foundation.css">
+  <link rel="stylesheet" href="../css/apps.css">
+  <style>
+    /* Author: Ufuk Gumus */
+    
+    /* General Styles */
+    body {
+      background-color: #e5e5e5;
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1, h2 {
+      color: #BE6731;
+    }
+
+    p {
+      color: #555;
+      line-height: 1.6;
+    }
+    
+
+    /* Project Cells */
+    .cell {
+      background-color: #fff;
+      padding: 20px;
+      margin: 10px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+
+    /* Hover effect */
+    .cell:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Button Styles */
+    button {
+      background-color: #007acc;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #005f99;
+    }
+
+    /* Grid Margins */
+    .grid-margin-x {
+      margin-bottom: 20px;
+    }
+
+    /* Responsive Design */
+    @media only screen and (max-width: 640px) {
+      h1 {
+        font-size: 2em;
+      }
+
+      h2 {
+        font-size: 1.5em;
+      }
+
+      p {
+        font-size: 1em;
+      }
+
+      .cell {
+        margin-bottom: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="grid-container">
+    <main>
+      <!-- Page Header -->
+      <div class="grid-x grid-margin-x">
+        <div class="cell">
+          <h1>Available Projects</h1>
+          <p>Browse through the list of available projects you can join.</p>
+        </div>
+      </div>
+
+      <!-- Available Projects Grid -->
+      <div class="grid-x grid-margin-x">
+        <!-- Project 1 -->
+        <div class="cell medium-4">
+          <h2>Project Name 1</h2>
+          <p>This project involves creating an e-commerce website for a new business.</p>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="cell medium-4">
+          <h2>Project Name 2</h2>
+          <p>This project focuses on mobile app development for healthcare services.</p>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="cell medium-4">
+          <h2>Project Name 3</h2>
+          <p>This project is about developing branding and logo for a local restaurant.</p>
+        </div>
+      </div>
+
+      <div class="grid-x grid-margin-x">
+        <!-- Project 4 -->
+        <div class="cell medium-4">
+          <h2>Project Name 4</h2>
+          <p>Design a social media campaign for a non-profit organization.</p>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="cell medium-4">
+          <h2>Project Name 5</h2>
+          <p>Build an interactive portfolio for a freelance designer.</p>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="cell medium-4">
+          <h2>Project Name 6</h2>
+          <p>Create a video marketing strategy for a tech startup.</p>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Foundation JavaScript -->
+  <script src="js/vendor/jquery.js"></script>
+  <script src="js/vendor/what-input.js"></script>
+  <script src="js/vendor/foundation.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>

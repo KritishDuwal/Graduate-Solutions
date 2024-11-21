@@ -1,0 +1,166 @@
+<!-- Author: Kritish Duwal-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create or Join Group</title>
+  <link rel="stylesheet" href="../css/foundation.css">
+  <link rel="stylesheet" href="../css/apps.css">
+  <style>
+    /* Author: Kritish Duwal */
+
+/* General Styles */
+
+
+/* Container Styling */
+.grid-container {
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Header Section */
+
+
+/* Input Fields */
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Checkbox Styling */
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Buttons */
+button {
+    background-color: #BE6731;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #000;
+}
+
+/* Responsive Styling */
+@media only screen and (max-width: 640px) {
+    .grid-container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+    
+    input[type="password"],
+    button {
+        font-size: 14px;
+    }
+}
+
+  </style>
+</head>
+<body>
+
+    <div class="grid-container">
+        <!-- Page Header -->
+        <div class="grid-x grid-margin-x">
+          <div class="cell">
+            <h1>Account Settings</h1>
+            <p>Manage your account preferences and settings below.</p>
+          </div>
+        </div>
+    
+        <!-- Change Password Section -->
+        <div class="grid-x grid-margin-x">
+          <div class="cell medium-12">
+            <h2>Change Password</h2>
+          </div>
+          <div class="cell medium-6">
+            <label for="current-password">Current Password</label>
+            <input type="password" id="current-password" placeholder="Enter current password">
+          </div>
+          <div class="cell medium-6">
+            <label for="new-password">New Password</label>
+            <input type="password" id="new-password" placeholder="Enter new password">
+          </div>
+          <div class="cell medium-6">
+            <label for="confirm-password">Confirm New Password</label>
+            <input type="password" id="confirm-password" placeholder="Re-enter new password">
+          </div>
+        </div>
+    
+        <!-- Notification Preferences Section -->
+        <div class="grid-x grid-margin-x">
+          <div class="cell medium-12">
+            <h2>Notification Preferences</h2>
+          </div>
+          <div class="cell medium-12">
+            <label>
+              <input type="checkbox" id="email-notifications" checked>
+              Receive email notifications
+            </label>
+          </div>
+          <div class="cell medium-12">
+            <label>
+              <input type="checkbox" id="sms-notifications">
+              Receive SMS notifications
+            </label>
+          </div>
+        </div>
+    
+        <!-- Account Privacy Section -->
+        <div class="grid-x grid-margin-x">
+          <div class="cell medium-12">
+            <h2>Account Privacy</h2>
+          </div>
+          <div class="cell medium-12">
+            <label>
+              <input type="checkbox" id="profile-public">
+              Make my profile public
+            </label>
+          </div>
+          <div class="cell medium-12">
+            <label>
+              <input type="checkbox" id="data-sharing" checked>
+              Share my data with third parties
+            </label>
+          </div>
+        </div>
+    
+        <!-- Save Changes Button -->
+        <div class="grid-x grid-margin-x">
+          <div class="cell medium-12">
+            <button type="button">Save Changes</button>
+          </div>
+        </div>
+    
+      </div>
+ <!-- Foundation JavaScript -->
+ <script src="js/vendor/jquery.js"></script>
+ <script src="js/vendor/what-input.js"></script>
+ <script src="js/vendor/foundation.js"></script>
+ <script src="js/app.js"></script>
+</body>
+</html>

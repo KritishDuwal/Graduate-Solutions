@@ -1,0 +1,132 @@
+<!-- Author: Shivam Garg -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create or Join Group</title>
+  <link rel="stylesheet" href="../css/foundation.css">
+  <link rel="stylesheet" href="../css/apps.css">
+  <style>
+    /* Author: Shivam Garg */
+
+/* General Styles */
+
+
+/* Notification Section */
+.grid-x {
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+
+
+/* Buttons */
+button {
+    background-color: #BE6731;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #000;
+}
+
+/* Clear All Button */
+.grid-x.grid-margin-x .cell.medium-12 button {
+    background-color: #22311E;
+    margin-top: 20px;
+}
+
+/* Responsive Styling */
+@media only screen and (max-width: 640px) {
+    .grid-container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
+
+  </style>
+</head>
+<body>
+
+    <div class="grid-container">
+        <!-- Page Header -->
+        <div class="grid-x grid-margin-x">
+          <div class="cell">
+            <h1>Notifications</h1>
+            <p>Stay updated with your latest notifications.</p>
+          </div>
+        </div>
+    
+        <!-- Notification List -->
+        <div class="grid-x grid-margin-x">
+          <div class="cell medium-12">
+            <h2>Your Notifications</h2>
+          </div>
+        </div>
+    
+        <!-- Notification 1 -->
+        <div class="grid-x grid-margin-x">
+          <div class="cell medium-10">
+            <p><strong>New Message:</strong> You have a new message from John Doe.</p>
+            <p><small>Date: 2024-09-22</small></p>
+          </div>
+          <div class="cell medium-2">
+            <button type="button">Mark as Read</button>
+          </div>
+        </div>
+    
+        <!-- Notification 2 -->
+        <div class="grid-x grid-margin-x">
+          <div class="cell medium-10">
+            <p><strong>Project Update:</strong> Your project "Website Redesign" has been updated.</p>
+            <p><small>Date: 2024-09-21</small></p>
+          </div>
+          <div class="cell medium-2">
+            <button type="button">Mark as Read</button>
+          </div>
+        </div>
+    
+        <!-- Notification 3 -->
+        <div class="grid-x grid-margin-x">
+          <div class="cell medium-10">
+            <p><strong>Reminder:</strong> Don't forget your meeting scheduled for tomorrow.</p>
+            <p><small>Date: 2024-09-20</small></p>
+          </div>
+          <div class="cell medium-2">
+            <button type="button">Mark as Read</button>
+          </div>
+        </div>
+    
+        <!-- Clear All Notifications Button -->
+        <div class="grid-x grid-margin-x">
+          <div class="cell medium-12">
+            <button type="button">Clear All Notifications</button>
+          </div>
+        </div>
+    
+      </div>
+    
+ <!-- Foundation JavaScript -->
+ <script src="js/vendor/jquery.js"></script>
+ <script src="js/vendor/what-input.js"></script>
+ <script src="js/vendor/foundation.js"></script>
+ <script src="js/app.js"></script>
+</body>
+</html>

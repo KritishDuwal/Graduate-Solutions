@@ -1,0 +1,161 @@
+<!-- Author: Shivam Garg -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create or Join Group</title>
+  <link rel="stylesheet" href="../css/foundation.css">
+  <link rel="stylesheet" href="../css/apps.css">
+  <style>
+    /* Author: Shivam Garg */
+
+/* General Styles */
+
+
+/* Container Styling */
+
+
+
+
+/* New Post Section */
+textarea {
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+button {
+    background-color: #BE6731;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #000;
+}
+
+/* Thread Post Styling */
+.grid-x {
+    margin-bottom: 20px;
+}
+
+div {
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+div strong {
+    font-size: 1.2em;
+    color: #22311E;
+}
+
+div em {
+    font-size: 0.9em;
+    color: #999;
+}
+
+div p {
+    margin-top: 10px;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+/* Responsive Styling */
+@media only screen and (max-width: 640px) {
+    .grid-container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
+
+  </style>
+</head>
+<body>
+
+    <div class="grid-container">
+        <!-- Page Header -->
+        <div class="grid-x grid-margin-x">
+          <div class="cell">
+            <h1>Project Thread Feed</h1>
+            <p>Keep track of all discussions and updates related to the project.</p>
+          </div>
+        </div>
+    
+        <!-- New Post Input -->
+        <div class="grid-x grid-margin-x">
+          <div class="cell medium-8">
+            <textarea placeholder="Write an update or comment..."></textarea>
+          </div>
+          <div class="cell medium-4">
+            <button type="button">Post</button>
+          </div>
+        </div>
+    
+        <!-- Thread Post 1 -->
+        <div class="grid-x grid-margin-x">
+          <div class="cell medium-12">
+            <div>
+              <strong>John Doe:</strong> <em>2024-09-20</em>
+              <p>Hey everyone, I’ve just finished the wireframe for the homepage. Take a look and let me know your thoughts!</p>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Thread Post 2 -->
+        <div class="grid-x grid-margin-x">
+          <div class="cell medium-12">
+            <div>
+              <strong>Sarah Lee:</strong> <em>2024-09-21</em>
+              <p>I checked out the wireframe, and it looks solid. I think we just need to tweak the navigation bar for better usability.</p>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Thread Post 3 -->
+        <div class="grid-x grid-margin-x">
+          <div class="cell medium-12">
+            <div>
+              <strong>You:</strong> <em>2024-09-22</em>
+              <p>Thanks for the feedback, Sarah! I'll make the adjustments to the navigation and push the update by tomorrow.</p>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Thread Post 4 -->
+        <div class="grid-x grid-margin-x">
+          <div class="cell medium-12">
+            <div>
+              <strong>Alex Smith:</strong> <em>2024-09-22</em>
+              <p>Also, I’ve completed the backend functionality for the login. Should be fully integrated by the end of the week.</p>
+            </div>
+          </div>
+        </div>
+    
+      </div>
+    
+ <!-- Foundation JavaScript -->
+ <script src="js/vendor/jquery.js"></script>
+ <script src="js/vendor/what-input.js"></script>
+ <script src="js/vendor/foundation.js"></script>
+ <script src="js/app.js"></script>
+</body>
+</html>

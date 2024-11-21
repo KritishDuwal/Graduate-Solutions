@@ -1,0 +1,156 @@
+<!-- Author: Kritish Duwal -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create or Join Group</title>
+  <link rel="stylesheet" href="../css/foundation.css">
+  <link rel="stylesheet" href="../css/apps.css">
+  <style>
+    /* Author: Kritish Duwal */
+
+/* General Styles */
+
+/* Container Styling */
+.grid-container {
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+div {
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+div strong {
+    font-size: 1.2em;
+    color: #22311E;
+}
+
+
+
+/* Message Alignment */
+.cell.medium-8 {
+    margin-left: 10px;
+    background-color: #e0e0e0;
+}
+
+.cell.medium-offset-4.medium-8 {
+    background-color: #BE6731;
+    color: white;
+}
+
+
+
+button {
+    background-color: #BE6731;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #000;
+}
+
+/* Responsive Styling */
+@media only screen and (max-width: 640px) {
+    .grid-container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    input[type="text"],
+    button {
+        font-size: 14px;
+    }
+}
+
+  </style>
+</head>
+<body>
+
+    <div class="grid-container">
+        <!-- Page Header -->
+        <div class="grid-x grid-margin-x">
+          <div class="cell">
+            <h1>Chat with John Doe</h1>
+          </div>
+        </div>
+    
+        <!-- Chat Messages -->
+        <div class="grid-x grid-margin-x">
+          <!-- User's Message (Left Aligned) -->
+          <div class="cell medium-8">
+            <div>
+              <strong>You:</strong>
+              <p>Hey John, how's the project going?</p>
+            </div>
+          </div>
+        </div>
+    
+        <div class="grid-x grid-margin-x">
+          <!-- John's Message (Right Aligned) -->
+          <div class="cell medium-offset-4 medium-8">
+            <div>
+              <strong>John:</strong>
+              <p>Hey, it's going great! I should have the first draft by tomorrow.</p>
+            </div>
+          </div>
+        </div>
+    
+        <div class="grid-x grid-margin-x">
+          <!-- User's Message (Left Aligned) -->
+          <div class="cell medium-8">
+            <div>
+              <strong>You:</strong>
+              <p>Awesome! Let me know if you need any help.</p>
+            </div>
+          </div>
+        </div>
+    
+        <div class="grid-x grid-margin-x">
+          <!-- John's Message (Right Aligned) -->
+          <div class="cell medium-offset-4 medium-8">
+            <div>
+              <strong>John:</strong>
+              <p>Will do! Thanks for the offer.</p>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Input for New Message -->
+        <div class="grid-x grid-margin-x">
+          <div class="cell medium-8">
+            <input type="text" placeholder="Type your message here...">
+          </div>
+          <div class="cell medium-4">
+            <button type="button">Send</button>
+          </div>
+        </div>
+    
+      </div>
+ <!-- Foundation JavaScript -->
+ <script src="js/vendor/jquery.js"></script>
+ <script src="js/vendor/what-input.js"></script>
+ <script src="js/vendor/foundation.js"></script>
+ <script src="js/app.js"></script>
+</body>
+</html>
