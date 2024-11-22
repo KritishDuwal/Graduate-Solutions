@@ -1,4 +1,3 @@
-    <!-- Author: Shivam garg -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,229 +5,150 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foundation for Sites</title>
+    <title>Responsive Navbar</title>
     <link rel="stylesheet" href="css/foundation.css">
-    <!-- <link rel="stylesheet" href="css/apps.css"> -->
-<style>
-    /* Author: Shivam Garg */
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
 
-/* General Styles */
+        /* Sidebar Styles */
+        aside.sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 250px;
+            height: 100vh;
+            background-color: #22311E;
+            color: white;
+            padding-top: 20px;
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease-in-out;
+        }
 
+        aside.sidebar ul.menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+        }
 
-/* Header Styles */
-header {
-    background-color: #22311E;
-    color: white;
-    padding: 20px 0;
-}
+        aside.sidebar ul.menu li {
+            width: 100%;
+            text-align: left;
+            margin-bottom: 20px;
+        }
 
-header nav ul.menu {
-    display: flex;
-    justify-content: flex-end;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
+        aside.sidebar ul.menu li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: block;
+            transition: background-color 0.3s;
+        }
 
-header nav ul.menu li {
-    margin-left: 20px;
-}
+        aside.sidebar ul.menu li a:hover {
+            background-color: #BE6731;
+        }
 
-header nav ul.menu li a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 20px;
-    background-color: transparent;
-    transition: background-color 0.3s ease;
-}
+        /* Sidebar Toggle Button */
+        .sidebar-toggle {
+            display: none;
+            background-color: #BE6731;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            text-align: center;
+        }
 
-header nav ul.menu li a:hover {
-    background-color: blue;
-    color: white;
-}
+        /* Main Content */
+        main {
+            margin-left: 260px;
+            padding: 20px;
+        }
 
-header .button {
-    background-color: #BE6731;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-}
+        /* Section Styling */
+        section {
+            padding: 40px 0;
+            margin-bottom: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
 
-header .button:hover {
-    background-color: #000;
-}
+        section h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #22311E;
+        }
 
-/* Main Content Section */
-main {
-    padding: 20px 0;
-}
+        /* Footer Styles */
+        footer {
+            background-color: #22311E;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
 
-/* Section Styling */
-section {
-    padding: 40px 0;
-    margin-bottom: 20px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+        /* Responsive Styles */
+        @media only screen and (max-width: 768px) {
+            aside.sidebar {
+                transform: translateX(-100%);
+            }
 
-section h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    text-align: center;
-    color: #22311E;
-}
+            .sidebar-toggle {
+                display: block;
+            }
 
-section ul {
-    list-style: none;
-    padding-left: 0;
-}
+            .sidebar-open aside.sidebar {
+                transform: translateX(0);
+            }
 
-section ul li {
-    margin-bottom: 15px;
-    font-size: 1.2em;
-}
-
-section ul li a {
-    color: #BE6731;
-    text-decoration: none;
-}
-
-section ul li a:hover {
-    text-decoration: underline;
-}
-
-/* Footer Styles */
-footer {
-    background-color: #22311E;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-}
-
-footer p {
-    margin: 0;
-}
-
-/* Sidebar Styles */
-aside.sidebar {
-    position: fixed; /* Fix the sidebar to the left */
-    top: 0;
-    left: 0;
-    width: 250px; /* Adjust width as needed */
-    height: 100vh; /* Full height of the viewport */
-    background-color: #22311E; /* Sidebar background color */
-    color: white;
-    padding-top: 20px; /* Padding to give space from top */
-    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2); /* Optional shadow effect */
-    display: flex; /* Enable flexbox */
-    flex-direction: column; /* Stack items vertically */
-    justify-content: flex-start; /* Align items at the top */
-    align-items: flex-start; /* Align items to the left */
-}
-
-aside.sidebar ul.menu {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    width: 100%; /* Make the menu fill the width of the sidebar */
-}
-
-aside.sidebar ul.menu li {
-    width: 100%; /* Make each list item fill the width */
-    text-align: left; /* Align the text to the left inside the list items */
-    margin-bottom: 20px;
-}
-
-aside.sidebar ul.menu li a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 20px;
-    display: block; /* Make links block-level for better click areas */
-    background-color: transparent;
-    transition: background-color 0.3s ease;
-}
-
-aside.sidebar ul.menu li a:hover {
-    background-color: #BE6731; /* Hover effect */
-    color: white;
-}
-
-/* Content Styling */
-main {
-    margin-left: 250px; /* Push the content to the right to make space for the sidebar */
-    padding: 20px;
-}
-
-header {
-    background-color: #22311E;
-    color: white;
-    padding: 20px 0;
-}
-
-
-/* Responsive Styles */
-@media only screen and (max-width: 640px) {
-    header nav ul.menu {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    main {
-        padding: 10px;
-    }
-
-    section {
-        padding: 20px;
-    }
-
-    section h1 {
-        font-size: 2em;
-    }
-}
-
-</style>
+            main {
+                margin-left: 0;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <!-- Header Section -->
-    <header>
-        <div class="grid-container">
-            <div class="grid-x grid-margin-x">
-                <div class="cell small-12">
-                    <!-- Sidebar Navigation using <aside> -->
-                    <aside class="sidebar">
-                        <ul class="menu">
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="#project-management">Project Management</a></li>
-                            <li><a href="#messages">Messages</a></li>
-                            <li><a href="#profile">Profile</a></li>
-                            <li><a href="index.html" class="button1">Sign Out</a></li>
-                        </ul>
-                    </aside>
-                </div>
-            </div>
-        </div>
-    </header>
-    
+    <!-- Sidebar Toggle Button -->
+    <div class="sidebar-toggle" onclick="toggleSidebar()">☰ Menu</div>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#project-management">Project Management</a></li>
+            <li><a href="#messages">Messages</a></li>
+            <li><a href="#profile">Profile</a></li>
+            <li><a href="index.html">Sign Out</a></li>
+        </ul>
+    </aside>
 
     <!-- Main Content -->
     <main>
-
         <!-- Project Management Section -->
         <section id="project-management" class="grid-container">
             <div class="grid-x grid-margin-x">
                 <div class="cell small-12">
                     <h1>Project Management</h1>
                     <ul>
-                        <li><a href="for-business/create-project.html">Create New Project</a></li>
-                        <li><a href="for-business/active-projects.html">Active Projects</a></li>
-                        <li><a href="for-business/complete-project.html">Completed Projects</a></li>
-                        <li><a href=for-business/available-project.html>Available Projects</a></li>
-                        <li><a href="for-business/view-proposals.html">View Project proposals</a></li>
+                        <li><a href="./for-graduates/join-group.html">Create/Join Group</a></li>
+                        <li><a href="./for-graduates/manage-group.html">Manage Existing Groups</a></li>
+                        <li><a href="for-graduates/active-projects.html">Active Projects</a></li>
+                        <li><a href="for-graduates/complete-project.html">Completed Projects</a></li>
+                        <li><a href="for-graduates/available-project.html">Available Projects</a></li>
                     </ul>
                 </div>
             </div>
@@ -239,11 +159,7 @@ header {
             <div class="grid-x grid-margin-x">
                 <div class="cell small-12">
                     <h1>Messages</h1>
-                    <ul>
-                        <li><a href="./messages/indivdual-chat.html">Individual Chats</a></li>
-                        <li><a href="./messages/group-chat.html">Group Chats</a></li>
-                        <li><a href="./messages/project-thread.html">Project-Specific Threads</a></li>
-                    </ul>
+                    <p>View and send messages here.</p>
                 </div>
             </div>
         </section>
@@ -253,36 +169,24 @@ header {
             <div class="grid-x grid-margin-x">
                 <div class="cell small-12">
                     <h1>Profile</h1>
-                    <ul>
-                        <li><a href="./profile/personal-portfolio.html">Personal Portfolio</a></li>
-                        <li><a href="./profile/payment.html">Payments</a></li>
-                        <li><a href="./profile/settings.html">Settings</a></li>
-                        <li><a href="./profile/review.html">Reviews & Ratings</a></li>
-                        <li><a href="./profile/notification.html">Notifications</a></li>
-                    </ul>
+                    <p>Manage your profile here.</p>
                 </div>
             </div>
         </section>
-
     </main>
 
-    <!-- Footer Section -->
+    <!-- Footer -->
     <footer>
-        <div class="grid-container">
-            <div class="grid-x grid-margin-x">
-                <div class="cell small-12">
-                    <p>&copy; 2024 Graduate Solutions. All Rights Reserved.</p>
-                </div>
-            </div>
-        </div>
+        <p>&copy; 2024 Graduate Solutions. All Rights Reserved.</p>
     </footer>
 
-    <!-- Foundation JavaScript -->
-    <script src="foundation/foundation.min.js"></script>
-    <script src="js/vendor/jquery.js"></script>
-    <script src="js/vendor/what-input.js"></script>
-    <script src="js/vendor/foundation.js"></script>
-    <script src="js/app.js"></script>
+    <!-- JavaScript for Sidebar Toggle -->
+    <script>
+        function toggleSidebar() {
+            document.body.classList.toggle('sidebar-open');
+        }
+    </script>
+
 </body>
 
 </html>

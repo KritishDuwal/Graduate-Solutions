@@ -42,68 +42,64 @@
             background-color: #000;
         }
 
-        /* Aside - Sidebar Styles */
-      /* Sidebar Styles */
-aside.sidebar {
-    position: fixed; /* Fix the sidebar to the left */
-    top: 0;
-    left: 0;
-    width: 250px; /* Adjust width as needed */
-    height: 100vh; /* Full height of the viewport */
-    background-color: #22311E; /* Sidebar background color */
-    color: white;
-    padding-top: 20px; /* Padding to give space from top */
-    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2); /* Optional shadow effect */
-    display: flex; /* Enable flexbox */
-    flex-direction: column; /* Stack items vertically */
-    justify-content: flex-start; /* Align items at the top */
-    align-items: flex-start; /* Align items to the left */
-}
-
-aside.sidebar ul.menu {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    width: 100%; /* Make the menu fill the width of the sidebar */
-}
-
-aside.sidebar ul.menu li {
-    width: 100%; /* Make each list item fill the width */
-    text-align: left; /* Align the text to the left inside the list items */
-    margin-bottom: 20px;
-}
-
-aside.sidebar ul.menu li a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 20px;
-    display: block; /* Make links block-level for better click areas */
-    background-color: transparent;
-    transition: background-color 0.3s ease;
-}
-
-aside.sidebar ul.menu li a:hover {
-    background-color: #BE6731; /* Hover effect */
-    color: white;
-}
-
-/* Content Styling */
-main {
-    margin-left: 250px; /* Push the content to the right to make space for the sidebar */
-    padding: 20px;
-}
-
-header {
-    background-color: #22311E;
-    color: white;
-    padding: 20px 0;
-}
- background-color: green;
+        /* Sidebar Styles */
+        aside.sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 250px;
+            height: 100vh;
+            background-color: #22311E;
+            color: white;
+            padding-top: 20px;
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            transition: transform 0.3s ease-in-out;
         }
 
-        /* Main Content Section */
+        aside.sidebar ul.menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+        }
+
+        aside.sidebar ul.menu li {
+            width: 100%;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        aside.sidebar ul.menu li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: block;
+            background-color: transparent;
+            transition: background-color 0.3s ease;
+        }
+
+        aside.sidebar ul.menu li a:hover {
+            background-color: #BE6731;
+            color: white;
+        }
+
+        /* Sidebar Toggle Button */
+        .sidebar-toggle {
+            display: none;
+            background-color: #BE6731;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        /* Content Styling */
         main {
-            margin-left: 260px; /* To offset for the fixed sidebar */
+            margin-left: 260px;
             padding: 20px;
         }
 
@@ -123,25 +119,6 @@ header {
             color: #22311E;
         }
 
-        section ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        section ul li {
-            margin-bottom: 15px;
-            font-size: 1.2em;
-        }
-
-        section ul li a {
-            color: #BE6731;
-            text-decoration: none;
-        }
-
-        section ul li a:hover {
-            text-decoration: underline;
-        }
-
         /* Footer Styles */
         footer {
             background-color: #22311E;
@@ -150,16 +127,21 @@ header {
             text-align: center;
         }
 
-        footer p {
-            margin: 0;
-        }
-
         /* Responsive Styles */
-        @media only screen and (max-width: 640px) {
-            aside {
-                position: static;
-                width: 100%;
-                height: auto;
+        @media only screen and (max-width: 768px) {
+            aside.sidebar {
+                position: fixed;
+                width: 250px;
+                height: 100vh;
+                transform: translateX(-100%); /* Hide sidebar by default */
+            }
+
+            .sidebar-toggle {
+                display: block;
+            }
+
+            .sidebar-open aside.sidebar {
+                transform: translateX(0); /* Show sidebar when open */
             }
 
             main {
@@ -180,9 +162,11 @@ header {
 
 <body>
 
+    <!-- Sidebar Toggle Button -->
+    <div class="sidebar-toggle" onclick="toggleSidebar()">☰ Menu</div>
+
     <!-- Header Section -->
-       <!-- Header Section -->
-       <header>
+    <header>
         <div class="grid-container">
             <div class="grid-x grid-margin-x">
                 <div class="cell small-12">
@@ -234,19 +218,6 @@ header {
             </div>
         </section>
 
-        <!-- Proposals Section -->
-        <section id="proposals" class="grid-container">
-            <div class="grid-x grid-margin-x">
-                <div class="cell small-12">
-                    <h1>Proposals</h1>
-                    <ul>
-                        <li><a href="./proposals/submitted-proposal.html">Submitted Proposals</a></li>
-                        <li><a href="./proposals/draft-proposal.html">Draft Proposals</a></li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
         <!-- Profile Section -->
         <section id="profile" class="grid-container">
             <div class="grid-x grid-margin-x">
@@ -281,6 +252,13 @@ header {
     <script src="js/vendor/what-input.js"></script>
     <script src="js/vendor/foundation.js"></script>
     <script src="js/app.js"></script>
+
+    <!-- Custom JavaScript for Sidebar Toggle -->
+    <script>
+        function toggleSidebar() {
+            document.body.classList.toggle('sidebar-open');
+        }
+    </script>
 
 </body>
 
