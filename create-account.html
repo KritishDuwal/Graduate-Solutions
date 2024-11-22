@@ -1,18 +1,14 @@
-    <!-- Author: Ufuk Gumus -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foundation for Sites</title>
-    <link rel="stylesheet" href="css/foundation.css">
-    <link rel="stylesheet" href="css/apps.css">
-    <style>
-        /* Author: Ufuk Gumus */
+    <title>Create Account</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js">
 
-/* General Styling */
+    </script>
+    <style>
+        /* General Styling */
 body {
     font-family: 'Arial', sans-serif;
     background-image: url('./images/loginbackground.png');
@@ -118,66 +114,70 @@ footer p {
         padding: 15px;
     }
 }
-</style>
-  </head>
-
+    </style>
+</head>
 <body>
-    <!-- Main Content Area -->
-    <main>
-        <div class="grid-container">
-            <div class="grid-x grid-margin-x align-center">
-                <div class="cell small-12 medium-6">
-                    <h1>Create Account</h1>
-                    <form>
-                        <label>User Name
-                            <input type="text" placeholder="Enter a user name" required>
-                        </label>
-                        <br>
-                        <label>Email:
-                            <input type="email" placeholder="Enter your email" required>
-                        </label>
-                        <br>
-                        <label>Password:
-                            <input type="password" placeholder="Create a password" required>
-                        </label>
-                        <br>
-                        <label>Confirm Password:
-                            <input type="password" placeholder="repeat your password" required>
-                        </label>
-                        <br>
-                        <label>Account Type:</label>
-                        <br>
-                        <label>
-                            <input type="radio" name="account-type" value="business" required> Business
-                        </label>
-                        <label>
-                            <input type="radio" name="account-type" value="graduate" required> Graduate
-                        </label>
-                        <br>
-                        <input type="submit" value="Create Account" class="button">
-                    </form>
-                    <p>Already have an account? <a href="login.html">Login</a></p>
-                </div>
-            </div>
-        </div>
-    </main>
+    <h1>Create Account</h1>
+    <form id="createAccountForm">
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="Enter username" required>
+        <br>
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter email" required>
+        <br>
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter password" required>
+        <br>
+        <label for="confirmPassword">Confirm Password</label>
+        <input type="password" id="confirmPassword" placeholder="Confirm password" required>
+        <br>
+        <label for="accountType">Account Type:</label>
+        <br>
+        <label>
+            <input type="radio" name="account-type" value="business" required> Business
+        </label>
+        <label>
+            <input type="radio" name="account-type" value="graduate" required> Graduate
+        </label>
+        <br>
+        <button type="submit">Create Account</button>
+    </form>
+    <p>Already have an account? <a href="login.html">Login</a></p>
 
-    <!-- Footer Section -->
-    <footer>
-        <div class="grid-container">
-            <div class="grid-x grid-margin-x">
-                <div class="cell small-12">
-                    <p>&copy; 2024 Graduate Solutions. All Rights Reserved.</p>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <script>
+        // Create Account Functionality
+        $(document).ready(function () {
+            $('#createAccountForm').on('submit', function (e) {
+                e.preventDefault();
 
-    <!-- Foundation JavaScript -->
-    <script src="js/vendor/jquery.js"></script>
-    <script src="js/vendor/what-input.js"></script>
-    <script src="js/vendor/foundation.js"></script>
-    <script src="js/app.js"></script>
+                const username = $('#username').val();
+                const email = $('#email').val();
+                const password = $('#password').val();
+                const confirmPassword = $('#confirmPassword').val();
+                const accountType = $('input[name="account-type"]:checked').val();
+
+                // Validate passwords match
+                if (password !== confirmPassword) {
+                    alert('Passwords do not match!');
+                    return;
+                }
+
+                // Store user in localStorage
+                const user = { username, email, password, accountType };
+                let users = JSON.parse(localStorage.getItem('users')) || [];
+                const userExists = users.find(u => u.email === email);
+
+                if (userExists) {
+                    alert('User with this email already exists!');
+                    return;
+                }
+
+                users.push(user);
+                localStorage.setItem('users', JSON.stringify(users));
+                alert('Account created successfully!');
+                window.location.href = 'login.html';
+            });
+        });
+    </script>
 </body>
-
 </html>
