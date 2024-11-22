@@ -112,6 +112,63 @@ footer p {
     margin: 0;
 }
 
+/* Sidebar Styles */
+aside.sidebar {
+    position: fixed; /* Fix the sidebar to the left */
+    top: 0;
+    left: 0;
+    width: 250px; /* Adjust width as needed */
+    height: 100vh; /* Full height of the viewport */
+    background-color: #22311E; /* Sidebar background color */
+    color: white;
+    padding-top: 20px; /* Padding to give space from top */
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2); /* Optional shadow effect */
+    display: flex; /* Enable flexbox */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: flex-start; /* Align items at the top */
+    align-items: flex-start; /* Align items to the left */
+}
+
+aside.sidebar ul.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%; /* Make the menu fill the width of the sidebar */
+}
+
+aside.sidebar ul.menu li {
+    width: 100%; /* Make each list item fill the width */
+    text-align: left; /* Align the text to the left inside the list items */
+    margin-bottom: 20px;
+}
+
+aside.sidebar ul.menu li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block; /* Make links block-level for better click areas */
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+aside.sidebar ul.menu li a:hover {
+    background-color: #BE6731; /* Hover effect */
+    color: white;
+}
+
+/* Content Styling */
+main {
+    margin-left: 250px; /* Push the content to the right to make space for the sidebar */
+    padding: 20px;
+}
+
+header {
+    background-color: #22311E;
+    color: white;
+    padding: 20px 0;
+}
+
+
 /* Responsive Styles */
 @media only screen and (max-width: 640px) {
     header nav ul.menu {
@@ -142,19 +199,21 @@ footer p {
         <div class="grid-container">
             <div class="grid-x grid-margin-x">
                 <div class="cell small-12">
-                    <nav>
-                        <ul class="menu align-right">
+                    <!-- Sidebar Navigation using <aside> -->
+                    <aside class="sidebar">
+                        <ul class="menu">
                             <li><a href="index.html">Home</a></li>
                             <li><a href="#project-management">Project Management</a></li>
                             <li><a href="#messages">Messages</a></li>
                             <li><a href="#profile">Profile</a></li>
-                            <li><a href="index.html" class="button">Sign Out</a></li>
+                            <li><a href="index.html" class="button1">Sign Out</a></li>
                         </ul>
-                    </nav>
+                    </aside>
                 </div>
             </div>
         </div>
     </header>
+    
 
     <!-- Main Content -->
     <main>

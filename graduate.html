@@ -1,4 +1,4 @@
-    <!-- Author: Pratish Dhungel -->
+<!-- Author: Pratish Dhungel -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,237 +8,273 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Foundation for Sites</title>
     <link rel="stylesheet" href="css/foundation.css">
-    <!-- <link rel="stylesheet" href="css/apps.css"> -->
     <style>
         /* Author: Pratish Dhungel */
 
-/* General Styles */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #22311E;
+            color: white;
+            padding: 20px 0;
+        }
+
+        /* Nav Styles */
+        header .button {
+            background-color: #BE6731;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+
+        header .button:hover {
+            background-color: #000;
+        }
+
+        /* Aside - Sidebar Styles */
+      /* Sidebar Styles */
+aside.sidebar {
+    position: fixed; /* Fix the sidebar to the left */
+    top: 0;
+    left: 0;
+    width: 250px; /* Adjust width as needed */
+    height: 100vh; /* Full height of the viewport */
+    background-color: #22311E; /* Sidebar background color */
+    color: white;
+    padding-top: 20px; /* Padding to give space from top */
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2); /* Optional shadow effect */
+    display: flex; /* Enable flexbox */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: flex-start; /* Align items at the top */
+    align-items: flex-start; /* Align items to the left */
 }
 
-/* Header Styles */
+aside.sidebar ul.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%; /* Make the menu fill the width of the sidebar */
+}
+
+aside.sidebar ul.menu li {
+    width: 100%; /* Make each list item fill the width */
+    text-align: left; /* Align the text to the left inside the list items */
+    margin-bottom: 20px;
+}
+
+aside.sidebar ul.menu li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block; /* Make links block-level for better click areas */
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+aside.sidebar ul.menu li a:hover {
+    background-color: #BE6731; /* Hover effect */
+    color: white;
+}
+
+/* Content Styling */
+main {
+    margin-left: 250px; /* Push the content to the right to make space for the sidebar */
+    padding: 20px;
+}
+
 header {
     background-color: #22311E;
     color: white;
     padding: 20px 0;
 }
+ background-color: green;
+        }
 
-header nav ul.menu {
-    display: flex;
-    justify-content: flex-end;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
+        /* Main Content Section */
+        main {
+            margin-left: 260px; /* To offset for the fixed sidebar */
+            padding: 20px;
+        }
 
-header nav ul.menu li {
-    margin-left: 20px;
-}
+        /* Section Styling */
+        section {
+            padding: 40px 0;
+            margin-bottom: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
 
-header nav ul.menu li a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 20px;
-    background-color: transparent;
-    transition: background-color 0.3s ease;
-}
+        section h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #22311E;
+        }
 
-header nav ul.menu li a:hover {
-    background-color: green;
-    color: white;
-}
+        section ul {
+            list-style: none;
+            padding-left: 0;
+        }
 
-header .button {
-    background-color: #BE6731;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-}
+        section ul li {
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
 
-header .button:hover {
-    background-color: #000;
-}
+        section ul li a {
+            color: #BE6731;
+            text-decoration: none;
+        }
 
-/* Main Content Section */
-main {
-    padding: 20px 0;
-}
+        section ul li a:hover {
+            text-decoration: underline;
+        }
 
-/* Section Styling */
-section {
-    padding: 40px 0;
-    margin-bottom: 20px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+        /* Footer Styles */
+        footer {
+            background-color: #22311E;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
 
-section h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    text-align: center;
-    color: #22311E;
-}
+        footer p {
+            margin: 0;
+        }
 
-section ul {
-    list-style: none;
-    padding-left: 0;
-}
+        /* Responsive Styles */
+        @media only screen and (max-width: 640px) {
+            aside {
+                position: static;
+                width: 100%;
+                height: auto;
+            }
 
-section ul li {
-    margin-bottom: 15px;
-    font-size: 1.2em;
-}
+            main {
+                margin-left: 0;
+                padding: 10px;
+            }
 
-section ul li a {
-    color: #BE6731;
-    text-decoration: none;
-}
+            section {
+                padding: 20px;
+            }
 
-section ul li a:hover {
-    text-decoration: underline;
-}
-
-/* Footer Styles */
-footer {
-    background-color: #22311E;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-}
-
-footer p {
-    margin: 0;
-}
-
-/* Responsive Styles */
-@media only screen and (max-width: 640px) {
-    header nav ul.menu {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    main {
-        padding: 10px;
-    }
-
-    section {
-        padding: 20px;
-    }
-
-    section h1 {
-        font-size: 2em;
-    }
-}
-
+            section h1 {
+                font-size: 2em;
+            }
+        }
     </style>
-  </head>
+</head>
 
 <body>
 
-   <!-- Header Section -->
-<header>
-    <div class="grid-container">
-        <div class="grid-x grid-margin-x">
-            <div class="cell small-12">
-                <nav>
-                    <ul class="menu align-right">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="#group-management">Group Management</a></li>
-                        <li><a href="#messages">Messages</a></li>
-                        <li><a href="#proposals">Proposals</a></li>
-                        <li><a href="#profile">Profile</a></li>
-                        <li><a href="index.html" class="button">Sign Out</a></li>
+    <!-- Header Section -->
+       <!-- Header Section -->
+       <header>
+        <div class="grid-container">
+            <div class="grid-x grid-margin-x">
+                <div class="cell small-12">
+                    <!-- Sidebar Navigation using <aside> -->
+                    <aside class="sidebar">
+                        <ul class="menu">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="#group-management">Project Management</a></li>
+                            <li><a href="#messages">Messages</a></li>
+                            <li><a href="#profile">Profile</a></li>
+                            <li><a href="index.html" class="button1">Sign Out</a></li>
+                        </ul>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Group Management Section -->
+        <section id="group-management" class="grid-container">
+            <div class="grid-x grid-margin-x">
+                <div class="cell small-6 medium-8 large-12">
+                    <h1>Group Management</h1>
+                    <ul>
+                        <li><a href="./for-graduates/join-group.html">Create/Join Group</a></li>
+                        <li><a href="./for-graduates/manage-group.html">Manage Existing Groups</a></li>
+                        <li><a href="for-graduates/active-projects.html">Active Projects</a></li>
+                        <li><a href="for-graduates/complete-project.html">Completed Projects</a></li>
+                        <li><a href="for-graduates/available-project.html">Available Projects</a></li>
                     </ul>
-                </nav>
+                </div>
+            </div>
+        </section>
+
+        <!-- Messages Section -->
+        <section id="messages" class="grid-container">
+            <div class="grid-x grid-margin-x">
+                <div class="cell small-12">
+                    <h1>Messages</h1>
+                    <ul>
+                        <li><a href="./messages/indivdual-chat.html">Individual Chats</a></li>
+                        <li><a href="./messages/group-chat.html">Group Chats</a></li>
+                        <li><a href="./messages/project-thread.html">Project-Specific Threads</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Proposals Section -->
+        <section id="proposals" class="grid-container">
+            <div class="grid-x grid-margin-x">
+                <div class="cell small-12">
+                    <h1>Proposals</h1>
+                    <ul>
+                        <li><a href="./proposals/submitted-proposal.html">Submitted Proposals</a></li>
+                        <li><a href="./proposals/draft-proposal.html">Draft Proposals</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Profile Section -->
+        <section id="profile" class="grid-container">
+            <div class="grid-x grid-margin-x">
+                <div class="cell small-12">
+                    <h1>Profile</h1>
+                    <ul>
+                        <li><a href="./profile/personal-portfolio.html">Personal Portfolio</a></li>
+                        <li><a href="./profile/payment.html">Payments</a></li>
+                        <li><a href="./profile/settings.html">Settings</a></li>
+                        <li><a href="./profile/review.html">Reviews & Ratings</a></li>
+                        <li><a href="./profile/notification.html">Notifications</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="grid-container">
+            <div class="grid-x grid-margin-x">
+                <div class="cell small-12">
+                    <p>&copy; 2024 Graduate Solutions. All Rights Reserved.</p>
+                </div>
             </div>
         </div>
-    </div>
-</header>
-
-<!-- Main Content -->
-<main>
-
-    <!-- Group Management Section -->
-    <section id="group-management" class="grid-container">
-        <div class="grid-x grid-margin-x">
-            <div class="cell small-6 medium-8 large-12">                   
-                <h1>Group Management</h1>
-                <ul>
-                    <li><a href="./for-graduates/join-group.html">Create/Join Group</a></li>
-                    <li><a href="./for-graduates/manage-group.html">Manage Existing Groups</a></li>
-                    <li><a href="for-graduates/active-projects.html">Active Projects</a></li>
-                    <li><a href="for-graduates/complete-project.html">Completed Projects</a></li>
-                    <li><a href="for-graduates/available-project.html">Available Projects</a></li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Messages Section -->
-    <section id="messages" class="grid-container">
-        <div class="grid-x grid-margin-x">
-            <div class="cell small-12">
-                <h1>Messages</h1>
-                <ul>
-                    <li><a href="./messages/indivdual-chat.html">Individual Chats</a></li>
-                    <li><a href="./messages/group-chat.html">Group Chats</a></li>
-                    <li><a href="./messages/project-thread.html">Project-Specific Threads</a></li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Proposals Section -->
-    <section id="proposals" class="grid-container">
-        <div class="grid-x grid-margin-x">
-            <div class="cell small-12">
-                <h1>Proposals</h1>
-                <ul>
-                    <li><a href="./proposals/submitted-proposal.html">Submitted Proposals</a></li>
-                    <li><a href="./proposals/draft-proposal.html">Draft Proposals</a></li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Profile Section -->
-    <section id="profile" class="grid-container">
-        <div class="grid-x grid-margin-x">
-            <div class="cell small-12">
-                <h1>Profile</h1>
-                <ul>
-                    <li><a href="./profile/personal-portfolio.html">Personal Portfolio</a></li>
-                    <li><a href="./profile/payment.html">Payments</a></li>
-                    <li><a href="./profile/settings.html">Settings</a></li>
-                    <li><a href="./profile/review.html">Reviews & Ratings</a></li>
-                    <li><a href="./profile/notification.html">Notifications</a></li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-</main>
-
-<!-- Footer Section -->
-<footer>
-    <div class="grid-container">
-        <div class="grid-x grid-margin-x">
-            <div class="cell small-12">
-                <p>&copy; 2024 Graduate Solutions. All Rights Reserved.</p>
-            </div>
-        </div>
-    </div>
-</footer>
-
+    </footer>
 
     <!-- Foundation JavaScript -->
     <script src="js/vendor/jquery.js"></script>
